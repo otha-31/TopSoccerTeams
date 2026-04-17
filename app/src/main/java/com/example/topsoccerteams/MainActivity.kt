@@ -9,14 +9,20 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
-fun logArrayValues(arr: Array<String>, limit: Int = 0) {
-    if (limit ==0) {
-        Log.v("Array Values", Arrays.toString(arr))
-    }else {
-        Log.v("Array Values" , Arrays.toString(
-            arr.sliceArray(0..limit -1)))
+
+
+fun getShortestString(arr: Array<String>, ) {
+    var ShortestLength = arr[0].length
+    val Element =arr[0]
+
+    for (element in arr) {
+        if (element.count()) < ShortestLength) {
+            ShortestLength = element.count()
+            ShortestElement = element
+        }
     }
-}
+    val ShortestElement = Unit
+    return ShortestElement
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,8 +50,8 @@ class MainActivity : AppCompatActivity() {
         logArrayValues(teams,3)
 
         //assigning array content to a variable
-        var SATeams =""
-        var counter = 0
+        val SATeams =""
+        val counter = 0
 
         //add all the teams to the display screen
         var teamsdisplay=""
@@ -71,4 +77,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    private fun logArrayValues(teams: Array<String>) {}
 }
